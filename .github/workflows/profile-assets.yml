@@ -1,0 +1,40 @@
+name: Generate profile assets
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare assets directory
+        run: mkdir -p assets
+
+      - name: Generate profile assets
+        run: |
+          curl -L "https://github-readme-stats.vercel.app/api?username=vishalsoni64&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A78BFA&icon_color=8B5CF6&text_color=C4B5FD&ring_color=7C3AED&include_all_commits=true&count_private=true" -o assets/github-stats.svg
+
+          curl -L "https://github-readme-stats.vercel.app/api/top-langs/?username=vishalsoni64&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C4B5FD&langs_count=8" -o assets/top-languages.svg
+
+          curl -L "https://streak-stats.demolab.com?user=vishalsoni64&theme=tokyonight&hide_border=true&background=0D1117&ring=7C3AED&fire=A78BFA&currStreakLabel=C4B5FD" -o assets/streak.svg
+
+          curl -L "https://github-profile-trophy.vercel.app/?username=vishalsoni64&theme=discord&no-frame=true&no-bg=true&margin-w=8&row=1&column=7" -o assets/github-trophies.svg
+
+          curl -L "https://github-readme-activity-graph.vercel.app/graph?username=vishalsoni64&bg_color=0D1117&color=A78BFA&line=7C3AED&point=C4B5FD&area=true&hide_border=true&custom_title=Vishal%20Soni%20V%20%E2%80%94%20Contribution%20Activity" -o assets/activity-graph.svg
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "Update profile analytics assets"
+          git push
