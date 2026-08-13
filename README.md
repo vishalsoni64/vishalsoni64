@@ -83,17 +83,17 @@ I enjoy translating business requirements into structured architectures, designi
 
 ---
 
-## AI/ML Expertise
+## Core Expertise
 
-| Domain | Proficiency | Details |
-|---|---|---|
-| AI Integration | Advanced | OpenAI API integration, AI-powered backend workflows, LLM-based NLP |
-| Natural Language Processing | Intermediate | Speech-to-Text and NLP workflows through AI integrations |
-| Machine Learning | Intermediate | Scikit-learn, model-based prediction workflows |
-| Deep Learning | Intermediate | TensorFlow-based AI systems and deep-learning applications |
-| Computer Vision | Intermediate | AI-powered image analysis through deep-learning workflows |
-| AI + IoT | Intermediate | Applied AI to embedded IoT systems for real-time accident detection |
-
+| Area | Technologies & Concepts |
+|---|---|
+| **Java Engineering** | Core Java • OOP • Collections • Generics • Exception Handling • Multithreading • Java 8 • Streams • Lambdas |
+| **Spring Boot** | Spring Boot • Spring MVC • Spring Data JPA • Hibernate • REST APIs • JDBC • Maven • Layered Architecture |
+| **AI Engineering** | OpenAI API • LLM Integration • NLP • Speech-to-Text • AI-powered Backend Workflows • AI Product Integration |
+| **Database Engineering** | PostgreSQL • MySQL • Redis • SQL • Normalization • Indexing • Query Optimization |
+| **Software Architecture** | OOAD • UML • SOLID • GRASP • Design Patterns • LLD • Domain Modeling |
+| **Full Stack Development** | React.js • JavaScript • HTML5 • CSS3 • REST API Integration |
+| **Engineering Practices** | Git • GitHub • Agile • Code Reviews • Clean Code • SDLC • Postman • JUnit |
 ---
 
 ## Featured Projects
